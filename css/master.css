@@ -157,10 +157,12 @@ a {
 .content {
   overflow: hidden;
   margin-left: 200px;
+  width: calc(100% - 200px);
 }
 @media (max-width:767px) {
   .content{
     margin-left: 60px;
+    width: calc(100% - 60px);
   }
 }
 .content .search::before {
