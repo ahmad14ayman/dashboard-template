@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Fourth Template For Me In Front End"/>
+  <meta name="description" content="The Fourth Template For Me In Front End" />
   <title>Setting</title>
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/frameWork.css">
   <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/settings.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -89,16 +91,175 @@
       </div>
       <!-- End Header -->
       <div class="content-text p-20">
-        <h1 class="p-relative head-page">Dashboard</h1>
-        <div class="wrapper d-grid gap-20 ">
-          <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
-            <h2>welcom</h2>
+        <h1 class="p-relative head-page settings-head">Settings</h1>
+        <div class="setting-page">
+          <div class="setting-container d-grid gap-20">
+            <div class="control bg-white rad-10 p-15"> <!--Control Section-->
+              <h2 class="m-0">Site Control</h2>
+              <p class="c-grey fs-14">Control The Website If There Is Maintenance</p>
+              <div class="control-content between-flex">
+                <div>
+                  <span class="d-block mt-10">Website Control</span>
+                  <span class="d-block mt-10 fs-14 c-grey">Open/Close Website And Type The Reason</span>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox">
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+              <textarea class="rad-6 p-10 mt-20 w-full" placeholder="Close Message Content"></textarea>
+            </div> <!-- /Control Section-->
+            <div class="general-info rad-10 p-15 bg-white"> <!--General Info-->
+              <h2 class="m-0">General Info</h2>
+              <p class="c-grey fs-14">General Information About Your Account</p>
+              <form>
+                <label class="c-grey" for="f-name">First Name</label><br>
+                <input class="rad-6" type="text" placeholder="First Name" id="f-name" readonly><br>
+
+                <label class="c-grey" for="l-name">Last Name</label><br>
+                <input class="rad-6" type="text" placeholder="Last Name" id="l-name" readonly><br>
+
+                <label class="c-grey" for="email">Email</label><br>
+                <input class="rad-6" type="email" placeholder="o@nn.sa" id="email" readonly>
+                <button class="form-button" type="button">Change</button>
+
+              </form>
+            </div> <!-- /General Info-->
+            <div class="security-info rad-10 bg-white p-15"> <!--Security Info-->
+              <h2 class="m-0">Security Info</h2>
+              <p class="c-grey">Security Information About Your Account</p>
+              <div class="password between-flex  ptb-20 border-bottom">
+                <div>
+                  <span class="d-block">Password</span>
+                  <span class="d-block fs-14 c-grey mt-10">Last Change On <span
+                      class="passChaingDate">25/10/2021</span></span>
+                </div>
+                <button class="n-button m-0 bg-blue c-white" type="button">Change</button>
+              </div>
+              <div class="Two-Factor between-flex  ptb-20 border-bottom">
+                <div>
+                  <span class="d-block">Two-Factor Authentication</span>
+                  <span class="d-block fs-14 c-grey mt-10">Enable/Disable The Feature</span>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox">
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="Devices between-flex  ptb-20">
+                <div>
+                  <span class="d-block">Devices</span>
+                  <span class="d-block fs-14 c-grey mt-10">Check The Login Devices List</span>
+                </div>
+                <button class="n-button m-0" type="button">Change</button>
+              </div>
+            </div><!--/Security Info-->
+            <div class="social-info bg-white rad-10 p-15"> <!--Social Info-->
+              <h2 class="m-0">Social Info</h2>
+              <p class="c-grey">Social Media Information</p>
+              <div class="d-flex align-center">
+                <i class="fa-brands center-flex fa-twitter"></i>
+                <input type="text" placeholder="Twitter Username" class="mt-10 rad-6">
+              </div>
+              <div class="d-flex align-center">
+                <i class="fa-brands center-flex fa-facebook-f"></i>
+                <input type="text" placeholder="Facebook Username" class="mt-10 rad-6">
+              </div>
+              <div class="d-flex align-center">
+                <i class="fa-brands center-flex fa-linkedin"></i>
+                <input type="text" placeholder="Linkedin Username" class="mt-10 rad-6">
+              </div>
+              <div class="d-flex align-center">
+                <i class="fa-brands center-flex fa-youtube"></i>
+                <input type="text" placeholder="Youtube Username" class="mt-10 rad-6">
+              </div>
+            </div><!--/Social Info-->
+            <div class="widget-control bg-white rad-10 p-15"><!--widget-control-->
+                <h2 class="m-0">Widgets Control</h2>
+                <p class="c-grey">Show/Hide Widgets</p>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" checked id="check1">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check1">Quick Draft</label>
+                </div>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" checked id="check2">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check2">Yearly Targets</label>
+                </div>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" checked id="check3">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check3">Tickets Statistics</label>
+                </div>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" checked id="check4">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check4">Latest News</label>
+                </div>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" id="check5">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check5">Latest Tasks</label>
+                </div>
+                <div class="form d-flex mt-15">
+                  <input class="rotate-checkbox" type="checkbox" checked id="check6">
+                  <div class="rotate-switch"></div>
+                  <label style="user-select: none;" class="ms-15" for="check6">Top Search Items</label>
+                </div>
+            </div><!--/widget-control-->
+            <div class="backup-manage bg-white rad-10 p-15"><!--Backup Manage-->
+              <h2 class="m-0">Backup Manager</h2>
+              <p class="c-grey fs-14">Control Backup Time And Location</p>
+              <div class="time border-bottom">
+                <div class="daily d-flex">
+                  <input type="radio" name="time" id="daily" class="radioSwitched">
+                  <label for="daily">Daily</label>
+                </div>
+                <div class="weekly d-flex">
+                  <input type="radio" name="time" id="monthly" class="radioSwitched">
+                  <label for="monthly">Monthly</label>
+                </div>
+                <div class="monthly d-flex">
+                  <input type="radio" name="time" id="yearly" class="radioSwitched">
+                  <label for="yearly">Yearly</label>
+                </div>
+              </div>
+              <div class="location between-flex">
+                <Label>
+                  <input type="radio" name="location">
+                  <div>
+                    <i class="fa-solid fa-server d-block"></i>
+                    <span>Megaman</span>
+                  </div>
+                </Label>
+                <Label>
+                  <input type="radio" name="location">
+                  <div>
+                    <i class="fa-solid fa-server d-block"></i>
+                    <span>Zero</span>
+                  </div>
+                </Label>
+                <Label>
+                  <input type="radio" name="location">
+                  <div>
+                    <i class="fa-solid fa-server d-block"></i>
+                    <span>Sigma</span>
+                  </div>
+                </Label>
+              </div>
+            </div><!--Backup Manage-->
           </div>
         </div>
       </div>
     </div>
     <!-- End Content -->
   </div>
+  <script src="JS/setting.js"></script>
 </body>
 
 </html>

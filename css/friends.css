@@ -1,0 +1,67 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --transition-duration: 0.4s;
+}
+
+.content .content-text h1::after {
+    width: 120px;
+}
+
+.friends {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.friends .links {
+    display: flex;
+    gap: 10px;
+}
+
+.friends .links a {
+    background: #eee;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-color);
+    transition: var(--transition-duration);
+}
+
+.friends .links a:first-child:hover {
+    background-color: var(--blue-alt-color);
+    color: white;
+}
+
+.friends .links a:last-child:hover {
+    background-color: var(--red-color);
+    color: white;
+}
+
+.friend-about,
+.friend-footer,
+.friends-details {
+    padding: 15px 0;
+}
+.friends-details{
+    position: relative;
+}
+.friends-details > span {
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0.2;
+    color: var(--red-color);
+}
+
+.friends-details>div:not(:first-child) {
+    margin-top: 5px;
+}

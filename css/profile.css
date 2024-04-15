@@ -1,0 +1,222 @@
+/* Start Global */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --transition-duration: 0.4s;
+}
+
+/* Header Width */
+.content .content-text h1::after {
+    width: 60px;
+    background-color: black;
+}
+
+/* portfolio */
+.portfolio .left-side {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+}
+
+.portfolio .left-side::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    background-color: rgb(237, 237, 237);
+}
+
+.portfolio .left-side img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.portfolio .left-side img+span {
+    font-size: 25px;
+}
+
+.portfolio .left-side .progress {
+    width: 170px;
+    height: 5px;
+    border-radius: 6px;
+    background-color: rgb(241, 244, 249);
+    margin: 12px 0 8px;
+    position: relative;
+}
+
+.portfolio .left-side .progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--blue-alt-color);
+}
+
+.portfolio .right-side {
+    flex: 1;
+}
+
+.portfolio .right-side .information {
+    padding: 20px;
+    transition: var(--transition-duration);
+}
+
+.portfolio .right-side .information:hover {
+    background-color: rgb(249, 249, 249);
+}
+
+.portfolio .right-side .information div div {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.profile-toggle {
+    cursor: pointer;
+    width: fit-content;
+    user-select: none;
+}
+
+.profile-toggle input {
+    appearance: none;
+    display: none;
+}
+
+.profile-toggle div {
+    width: 70px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #ccc;
+    position: relative;
+    transition: var(--transition-duration);
+}
+
+.profile-toggle div::before {
+    font-family: var(--fa-style-family-classic);
+    font-weight: bold;
+    content: "\f00d";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+    color: rgb(204, 204, 204);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: var(--transition-duration);
+}
+
+.profile-toggle input:checked+div {
+    background-color: var(--blue-alt-color);
+}
+
+.profile-toggle input:checked+div::before {
+    left: calc(70px - 18px);
+    content: "\f00c";
+    color: var(--blue-alt-color);
+}
+
+@media (max-width:767px) {
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio .right-side .information div {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+/* End Of Portofolio */
+
+/* Skills And Activities */
+.skills-activities {
+    gap: 20px;
+}
+
+/* Skills */
+.skills-activities .skills {
+    flex-basis: 30%;
+}
+
+.skills .skill {
+    padding: 25px 0;
+}
+
+.skills .skill:first-of-type {
+    margin-top: 50px;
+}
+
+.skills .skill:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+
+.borderd {
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Actitivites */
+.skills-activities .activities {
+    flex-basis: 70%;
+}
+
+.activity {
+    padding: 30px 10px;
+}
+
+.activity:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.activity>div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.activity img {
+    width: 70px;
+}
+
+@media (max-width:767px){
+    .skills-activities{
+        flex-direction: column;
+    }
+    .skills .skill {
+        display: flex;
+        justify-content: center;
+    }
+    .activity {
+        flex-direction: column;
+        text-align: center;
+    }
+    .activity>div {
+        flex-direction: column;
+    }
+    .activity>div:last-of-type span:first-of-type {
+        margin-top: 10px;
+    }
+}
+/*End Skills And Activities */

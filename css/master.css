@@ -8,24 +8,34 @@
   --grey-color: #888;
   --transition-duration: 0.4s;
 }
-::-webkit-scrollbar  /* width of scrollbar*/
-{
+
+::-webkit-scrollbar
+
+/* width of scrollbar*/
+  {
   width: 10px;
 }
-::-webkit-scrollbar-track /* background-color of scrollbar*/
-{
+
+::-webkit-scrollbar-track
+
+/* background-color of scrollbar*/
+  {
   background-color: white;
   /* border-radius: 20px; */
 }
-::-webkit-scrollbar-thumb /* background-color of the scroll in the scrollbar*/
-{
+
+::-webkit-scrollbar-thumb
+
+/* background-color of the scroll in the scrollbar*/
+  {
   background-color: var(--blue-color);
   /* border-radius: 20px; */
 }
-::-webkit-scrollbar-thumb:hover
-{
+
+::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-alt-color);
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -65,6 +75,8 @@ a {
 /* Side Bar  */
 .sidebar {
   width: 200px;
+  position: fixed;
+  height: 100vh;
 }
 
 .sidebar h3 {
@@ -144,8 +156,13 @@ a {
 /* Start Content */
 .content {
   overflow: hidden;
+  margin-left: 200px;
 }
-
+@media (max-width:767px) {
+  .content{
+    margin-left: 60px;
+  }
+}
 .content .search::before {
   font-family: var(--fa-style-family-classic);
   font-weight: 900;
@@ -221,6 +238,7 @@ a {
   left: 3px;
   width: 80px;
   height: 3px;
+  transition: 0.3s;
 }
 
 .content .content-text h1::before {
@@ -232,28 +250,30 @@ a {
   width: 20px;
   background-color: black;
 }
-@media (max-width:767px)
-{
-  .content .content-text 
-  {
+
+@media (max-width:767px) {
+  .content .content-text {
     padding: 10px;
   }
 }
+
 /* End Heading  */
 /* Start Wrapper */
-.content .content-text .wrapper
-{
-  grid-template-columns: repeat(auto-fill,minmax(450px , 1fr));
+.content .content-text .wrapper,
+.content .content-text .setting-page .setting-container {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   /* margin-right: 20px; */
 }
-@media (max-width:767px)
-{
-  .content .content-text .wrapper
-{
-  grid-template-columns: minmax(200px , 1fr);
-  gap: 10px;
+
+@media (max-width:767px) {
+
+  .content .content-text .wrapper,
+  .content .content-text .setting-page .setting-container {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
 }
-}
+
 /* End Wrapper */
 
 /* End Content */

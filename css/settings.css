@@ -1,0 +1,192 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --transition-duration: 0.4s;
+}
+
+.settings-head::after {
+    width: 40px !important;
+}
+
+.control textarea {
+    resize: none;
+    min-height: 150px;
+    border: 1px solid #ccc;
+}
+
+.control textarea::placeholder {
+    font-size: 14px;
+}
+
+/* General Info */
+form label {
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+form input {
+    outline: none;
+    border: 1px #ccc solid;
+    padding: 8px 15px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+form input::placeholder {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+form input[type="email"] {
+    cursor: no-drop;
+    background-color: rgb(232, 240, 253);
+    width: calc(100% - 100px);
+}
+
+form button {
+    border: none;
+    background-color: white;
+    width: fit-content;
+    padding: 9px 15px;
+    color: var(--blue-alt-color);
+    cursor: pointer;
+}
+
+/* Social Info */
+.social-info div>i {
+    background-color: rgb(246, 246, 246);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: var(--transition-duration);
+    color: rgb(136, 136, 136);
+}
+
+.social-info div>input {
+    outline: none;
+    border: 1px #ccc solid;
+    padding: 0 15px;
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 0 6px 6px 0;
+    background-color: rgb(246, 246, 246);
+}
+
+.social-info div>input::placeholder {
+    font-size: 14px
+}
+
+.social-info div:focus-within i {
+    color: black;
+}
+
+/* widget-control */
+.widget-control .form,
+.widget-control .form label {
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.widget-control .form:hover .rotate-switch {
+    border-color: var(--blue-alt-color);
+}
+
+
+/* Backup Setting */
+.backup-manage .time {
+    padding: 10px 0;
+}
+
+.backup-manage .time>div {
+    margin-bottom: 10px;
+}
+
+.backup-manage .time input {
+    appearance: none;
+}
+
+.backup-manage .time label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.backup-manage .time label::before,
+.backup-manage .time label::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: var(--transition-duration);
+
+}
+
+.backup-manage .time label::before {
+    transform: translateY(-50%);
+    outline: 2px solid #ccc;
+    outline-offset: 3px;
+    transition: var(--transition-duration);
+}
+
+.backup-manage .time label::after {
+    transform: translateY(-50%) scale(0);
+    background-color: var(--blue-alt-color);
+}
+
+.backup-manage .time input:checked+label::after{
+    transform: translateY(-50%) scale(1);
+}
+
+
+.backup-manage .time input:checked+label::before{
+    outline-color: var(--blue-alt-color);
+}
+
+/* Backup */
+.backup-manage .location label{
+    flex-basis: 30%;
+    cursor: pointer;
+    user-select: none;
+}
+.backup-manage .location label>input{
+    appearance: none;
+}
+.backup-manage .location label div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid var(--grey-color);
+    border-radius: 7px;
+    padding: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.backup-manage .location label>input:checked + div{
+    border-color: var(--blue-alt-color);
+    color: var(--blue-alt-color);
+}
+@media (max-width:767px)
+{
+    .location{
+        flex-direction: column;
+    }
+    .backup-manage .location label{
+        width: 100%;
+    }
+}

@@ -1,0 +1,123 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --transition-duration: 0.4s;
+}
+
+.content .content-text h1::after {
+    width: 80px;
+}
+
+.projects  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+}
+.projects .project {
+    padding: 20px;
+}
+
+.projects .project .proj-team {
+    padding: 15px;
+}
+
+.projects .project .proj-team img {
+    margin-left: -15px;
+    border: 2px white solid;
+    cursor: pointer;
+    position: relative;
+}
+
+.projects .project .proj-team img:hover {
+    z-index: 100;
+}
+
+.projects .project .proj-skills {
+    gap: 7px;
+    justify-content: end;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width:767px) {
+    .projects .project .proj-skills {
+        flex-direction: column;
+    }
+}
+
+.projects .project .proj-footer {
+    padding: 20px 0 0;
+}
+
+@media (max-width:767px) {
+    .projects .project .proj-footer {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+.projects .project .proj-footer .progress {
+    width: 50%;
+    height: 8px;
+    background-color: rgb(241, 244, 249);
+    border-radius: 10px;
+    position: relative;
+}
+
+@media (max-width:767px) {
+    .projects .project .proj-footer .progress {
+        width: 100%;
+    }
+}
+
+.projects .project .proj-footer .progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.projects .project:nth-child(1) .proj-footer .progress::before {
+    background-color: var(--red-color);
+}
+
+.projects .project:nth-child(2) .proj-footer .progress::before {
+    background-color: var(--green-color);
+    width: 75%;
+}
+.projects .project:nth-child(3) .proj-footer .progress::before {
+    background-color: var(--blue-alt-color);
+    width: 100%;
+}
+.projects .project:nth-child(4) .proj-footer .progress::before {
+    background-color: var(--green-color);
+    width: 46%;
+}
+.projects .project:nth-child(5) .proj-footer .progress::before {
+    background-color: var(--green-color);
+    width: 24%;
+}
+.projects .project:nth-child(6) .proj-footer .progress::before {
+    background-color: var(--red-color);
+    width: 32%;
+}
+.projects .project:nth-child(7) .proj-footer .progress::before {
+    background-color: var(--green-color);
+    width: 51%;
+}
+.projects .project:nth-child(8) .proj-footer .progress::before {
+    background-color: var(--blue-alt-color);
+    width: 15%;
+}
+.projects .project:nth-child(9) .proj-footer .progress::before {
+    background-color: var(--orange-color);
+    width: 38%;
+}
