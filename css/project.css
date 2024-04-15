@@ -17,6 +17,13 @@
     grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
     gap: 20px;
 }
+@media (max-width:767px) {
+    .projects  {
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        gap: 10px;
+        margin: 0 10px;
+    }
+}
 .projects .project {
     padding: 20px;
 }
